@@ -7,6 +7,7 @@ using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.DependencyInjection;
 using OSSN.Models;
 
 namespace OSSN
@@ -15,25 +16,22 @@ namespace OSSN
     {
         public static void Main(string[] args)
         {
-            // BuildWebHost(args).Run();
+            var host = BuildWebHost(args);
 
+            using (var scope = host.Services.CreateScope())
+            {
+                var services = scope.ServiceProvider;
+                try
+                {
+                    var context = services.GetRequiredService<OpenSSNDBContext>();
+                } catch (Exception ex)
+                {
+                    var logger = services.GetRequiredService<ILogger<Program>>();
+                    logger.LogError(ex, "Error starting database.");
+                }
+            }
 
-            //using (var db = new OpenSSNDBContext())
-            //{
-            //    // Creating a new Person and saving it to the DB
-            //    var newPerson = new Person();
-            //    newPerson.Firstname = "Axel";
-            //    newPerson.Lastname = "Kvistad";
-            //    db.Person.Add(newPerson);
-            //    var count = db.SaveChanges();
-            //    Console.WriteLine("{0} records saved to database", count);
-
-            //    Console.WriteLine("\nAll persons in the database:");
-            //    foreach (var person in db.Person)
-            //    {
-            //        Console.WriteLine("{0} {1}", person.Firstname, person.Lastname);
-            //    }
-            //} 
+            host.Run();
         }
 
         public static IWebHost BuildWebHost(string[] args) =>
