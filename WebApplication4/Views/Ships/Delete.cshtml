@@ -1,0 +1,183 @@
+﻿@model OSSN.Models.Ship
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Ship</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Imono)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Imono)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Yearofbuild)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Yearofbuild)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Mmsino)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Mmsino)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Shipname)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Shipname)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Callsign)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Callsign)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Dwt)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Dwt)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Grosstonnage)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Grosstonnage)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Shiplength)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Shiplength)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Breadth)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Breadth)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Speed)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Speed)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Power)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Power)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Height)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Height)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Draught)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Draught)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Hassidethrusters)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Hassidethrusters)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Hassidethrustersfront)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Hassidethrustersfront)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Hassidethrustersback)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Hassidethrustersback)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Remark)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Remark)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CompanyCompany)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CompanyCompany.Companyid)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CountryCountry)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CountryCountry.Countryid)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ShipbreadthtypeShipbreadthtype)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ShipbreadthtypeShipbreadthtype.Shipbreadthtype1)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ShipflagcodeShipflagcode)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ShipflagcodeShipflagcode.Shipflagcodeid)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ShiphulltypeShiphulltype)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ShiphulltypeShiphulltype.Shiphulltype1)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ShiplengthtypeShiplengthtype)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ShiplengthtypeShiplengthtype.Shiplengthtype1)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ShippowertypeShippowertype)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ShippowertypeShippowertype.Shippowertype1)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ShipsourceShipsource)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ShipsourceShipsource.Shipsource1)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ShipstatusShipstatus)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ShipstatusShipstatus.Shipstatus1)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ShiptypeShiptype)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ShiptypeShiptype.Systemname)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Shipid" />
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>

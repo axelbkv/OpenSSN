@@ -1,0 +1,191 @@
+﻿@model IEnumerable<OSSN.Models.Ship>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Imono)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Yearofbuild)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Mmsino)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Shipname)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Callsign)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Dwt)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Grosstonnage)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Shiplength)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Breadth)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Speed)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Power)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Height)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Draught)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Hassidethrusters)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Hassidethrustersfront)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Hassidethrustersback)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Remark)
+                </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CompanyCompany)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CountryCountry)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ShipbreadthtypeShipbreadthtype)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ShipflagcodeShipflagcode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ShiphulltypeShiphulltype)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ShiplengthtypeShiplengthtype)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ShippowertypeShippowertype)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ShipsourceShipsource)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ShipstatusShipstatus)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ShiptypeShiptype)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Imono)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Yearofbuild)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Mmsino)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Shipname)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Callsign)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Dwt)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Grosstonnage)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Shiplength)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Breadth)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Speed)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Power)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Height)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Draught)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Hassidethrusters)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Hassidethrustersfront)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Hassidethrustersback)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Remark)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CompanyCompany.Companyid)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CountryCountry.Countryid)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ShipbreadthtypeShipbreadthtype.Shipbreadthtype1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ShipflagcodeShipflagcode.Shipflagcodeid)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ShiphulltypeShiphulltype.Shiphulltype1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ShiplengthtypeShiplengthtype.Shiplengthtype1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ShippowertypeShippowertype.Shippowertype1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ShipsourceShipsource.Shipsource1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ShipstatusShipstatus.Shipstatus1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ShiptypeShiptype.Systemname)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Shipid">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Shipid">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Shipid">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

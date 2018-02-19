@@ -1,0 +1,158 @@
+﻿@model OSSN.Models.Ship
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h2>Create</h2>
+
+<h4>Ship</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Shipid" class="control-label"></label>
+                <input asp-for="Shipid" class="form-control" />
+                <span asp-validation-for="Shipid" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ShiphulltypeShiphulltypeid" class="control-label"></label>
+                <select asp-for="ShiphulltypeShiphulltypeid" class ="form-control" asp-items="ViewBag.ShiphulltypeShiphulltypeid"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="ShippowertypeShippowertypeid" class="control-label"></label>
+                <select asp-for="ShippowertypeShippowertypeid" class ="form-control" asp-items="ViewBag.ShippowertypeShippowertypeid"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="ShipbreadthtypeShipbreadthtypeid" class="control-label"></label>
+                <select asp-for="ShipbreadthtypeShipbreadthtypeid" class ="form-control" asp-items="ViewBag.ShipbreadthtypeShipbreadthtypeid"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="ShiplengthtypeShiplengthtypeid" class="control-label"></label>
+                <select asp-for="ShiplengthtypeShiplengthtypeid" class ="form-control" asp-items="ViewBag.ShiplengthtypeShiplengthtypeid"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="ShipflagcodeShipflagcodeid" class="control-label"></label>
+                <select asp-for="ShipflagcodeShipflagcodeid" class ="form-control" asp-items="ViewBag.ShipflagcodeShipflagcodeid"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="CountryCountryid" class="control-label"></label>
+                <select asp-for="CountryCountryid" class ="form-control" asp-items="ViewBag.CountryCountryid"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="ShipsourceShipsourceid" class="control-label"></label>
+                <select asp-for="ShipsourceShipsourceid" class ="form-control" asp-items="ViewBag.ShipsourceShipsourceid"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="ShipstatusShipstatusid" class="control-label"></label>
+                <select asp-for="ShipstatusShipstatusid" class ="form-control" asp-items="ViewBag.ShipstatusShipstatusid"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="CompanyCompanyid" class="control-label"></label>
+                <select asp-for="CompanyCompanyid" class ="form-control" asp-items="ViewBag.CompanyCompanyid"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="ShiptypeShiptypeid" class="control-label"></label>
+                <select asp-for="ShiptypeShiptypeid" class ="form-control" asp-items="ViewBag.ShiptypeShiptypeid"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="Imono" class="control-label"></label>
+                <input asp-for="Imono" class="form-control" />
+                <span asp-validation-for="Imono" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Yearofbuild" class="control-label"></label>
+                <input asp-for="Yearofbuild" class="form-control" />
+                <span asp-validation-for="Yearofbuild" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Mmsino" class="control-label"></label>
+                <input asp-for="Mmsino" class="form-control" />
+                <span asp-validation-for="Mmsino" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Shipname" class="control-label"></label>
+                <input asp-for="Shipname" class="form-control" />
+                <span asp-validation-for="Shipname" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Callsign" class="control-label"></label>
+                <input asp-for="Callsign" class="form-control" />
+                <span asp-validation-for="Callsign" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Dwt" class="control-label"></label>
+                <input asp-for="Dwt" class="form-control" />
+                <span asp-validation-for="Dwt" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Grosstonnage" class="control-label"></label>
+                <input asp-for="Grosstonnage" class="form-control" />
+                <span asp-validation-for="Grosstonnage" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Shiplength" class="control-label"></label>
+                <input asp-for="Shiplength" class="form-control" />
+                <span asp-validation-for="Shiplength" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Breadth" class="control-label"></label>
+                <input asp-for="Breadth" class="form-control" />
+                <span asp-validation-for="Breadth" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Speed" class="control-label"></label>
+                <input asp-for="Speed" class="form-control" />
+                <span asp-validation-for="Speed" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Power" class="control-label"></label>
+                <input asp-for="Power" class="form-control" />
+                <span asp-validation-for="Power" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Height" class="control-label"></label>
+                <input asp-for="Height" class="form-control" />
+                <span asp-validation-for="Height" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Draught" class="control-label"></label>
+                <input asp-for="Draught" class="form-control" />
+                <span asp-validation-for="Draught" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Hassidethrusters" class="control-label"></label>
+                <input asp-for="Hassidethrusters" class="form-control" />
+                <span asp-validation-for="Hassidethrusters" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Hassidethrustersfront" class="control-label"></label>
+                <input asp-for="Hassidethrustersfront" class="form-control" />
+                <span asp-validation-for="Hassidethrustersfront" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Hassidethrustersback" class="control-label"></label>
+                <input asp-for="Hassidethrustersback" class="form-control" />
+                <span asp-validation-for="Hassidethrustersback" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Remark" class="control-label"></label>
+                <input asp-for="Remark" class="form-control" />
+                <span asp-validation-for="Remark" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
